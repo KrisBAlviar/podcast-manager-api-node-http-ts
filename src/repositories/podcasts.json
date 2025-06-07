@@ -1,0 +1,38 @@
+[
+ {
+    "podcastName": "Flow",
+    "episode": "PVC - Flow #453",
+    "videoId": "8alvXuLKQzA",
+    "categories": ["sports", "football"]
+  },
+  {
+    "podcastName": "Flow",
+    "episode": "CBUM - Flow #319",
+    "videoId": "pQSuQmUfS30",
+    "categories": ["health", "bodybuilder", "sports"]
+  },
+  {
+    "podcastName": "Flow",
+    "episode": "JULIO BALESTRIN E RICHARD RASMUSSEN - Flow #450",
+    "videoId": "MUogXEAt9_U",
+    "categories": ["wildlife", "bodybuilder", "sports"]
+  },
+  {
+    "podcastName": "Flow",
+    "episode": "PROFESSOR HOC - Flow #448",
+    "videoId": "iaUajE0lSmg",
+    "categories": ["politics", "war"]
+  },
+  {
+    "podcastName": "InteligenciaLTDA",
+    "episode": "100 HOMENS X 1 GORILA: RICHARD RASMUSSEN E BIÓLOGO HENRIQUE - Inteligência Ltda. Podcast #1527",
+    "videoId": "53NlgEDoI3o",
+    "categories": ["wildlife", "nature", "animals"]
+  },
+  {
+    "podcastName": "InteligenciaLTDA",
+    "episode": "RELATOS REAIS DE APARIÇÕES E ENTIDADES: DANI PIRES, ANA E MILICI - Inteligência Ltda. Podcast #1435",
+    "videoId": "BXZXD6hcoWs",
+    "categories": ["paranormal", "spirituality", "religion"]
+  }
+]
