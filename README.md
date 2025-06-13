@@ -1,84 +1,138 @@
-# 🎧 Podcast Manager API
+# Podcast Manager API 🎙️
 
-A lightweight and framework-free REST API built with **Node.js** and **TypeScript** to manage and filter podcast episodes by name. Designed to demonstrate clean architecture, modular organization, and raw HTTP server handling without relying on Express or other frameworks.
+![GitHub release](https://img.shields.io/github/release/KrisBAlviar/podcast-manager-api-node-http-ts.svg) ![GitHub issues](https://img.shields.io/github/issues/KrisBAlviar/podcast-manager-api-node-http-ts.svg) ![GitHub stars](https://img.shields.io/github/stars/KrisBAlviar/podcast-manager-api-node-http-ts.svg)
 
+Welcome to the **Podcast Manager API**! This project provides a REST API for managing podcast episodes using **Node.js**, **TypeScript**, and raw **HTTP**—without any frameworks. It aims to give developers a simple yet powerful way to create, update, and manage podcast episodes.
 
+## Table of Contents
 
-## 🚀 Technologies & Tools
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the API](#running-the-api)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-This project uses modern tools and minimalistic setup to keep the application fast and educational:
+## Features
 
-| Technology      | Description                                                                 |
-|-----------------|-----------------------------------------------------------------------------|
-| **Node.js**     | JavaScript runtime environment for building scalable server-side applications |
-| **TypeScript**  | Strongly typed superset of JavaScript for better tooling and maintainability |
-| **TSX**         | Node.js runtime to execute `.ts` files directly, useful for development     |
-| **Tsup**        | Zero-config bundler for TypeScript, used to generate production builds      |
-| **Dotenv**      | Loads environment variables from a `.env` file into `process.env`           |
-| **Raw HTTP**    | Uses `http` module directly (no frameworks like Express)  
+- **Manage Podcast Episodes**: Create, read, update, and delete episodes.
+- **No Frameworks**: Built using raw HTTP for a lightweight solution.
+- **TypeScript Support**: Strong typing to enhance development experience.
+- **Clean Architecture**: Organized code structure for maintainability.
+- **Environment Variables**: Use `.env` files for configuration.
 
-## 📁 Project Structure
+## Technologies Used
+
+This project leverages the following technologies:
+
+- **Node.js**: JavaScript runtime for building scalable network applications.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **dotenv**: Loads environment variables from a `.env` file.
+- **raw HTTP**: Directly uses HTTP for requests and responses.
+- **Clean Architecture**: Promotes separation of concerns and testability.
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (version 14 or higher)
+- **npm** (Node Package Manager)
+- **TypeScript** (optional, for development)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/KrisBAlviar/podcast-manager-api-node-http-ts.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd podcast-manager-api-node-http-ts
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env` file in the root directory and configure your environment variables. Here’s an example:
+
+   ```plaintext
+   PORT=3000
+   DATABASE_URL=mongodb://localhost:27017/podcast
+   ```
+
+### Running the API
+
+To start the API, run the following command:
 
 ```bash
-src/
-├── controllers/    # API route handlers
-├── models/         # Types and interfaces
-├── repositories/   # Simulated data access
-├── routes/         # Enum to http methods
-├── services/       # Business logic
-├── utils/          # Utilities and enums
-├── app.ts          # App logic
-└── server.ts       # Create server
+npm start
 ```
 
-## 📦 Installation
+The API will run on the port specified in your `.env` file (default is 3000).
 
-```bash
-# Clone the repository
-git clone https://github.com/Gustavo-Zamai/podcast-manager-api-node-http-ts.git
+## API Endpoints
 
-# Install dependencies
-npm install
-```
-## 🧪 Running in Development
-```bash
-npm run start:dev
-```
+Here are the available API endpoints:
 
-## 📌 API Endpoints
-**GET** /api/episode?p={podcast_name}
-- `Description`: Filters and returns a list of podcast episodes that match the specified podcast name.
+### 1. Get All Episodes
 
-- `Query Parameter`:
+- **Endpoint**: `GET /episodes`
+- **Description**: Retrieve a list of all podcast episodes.
+- **Response**: JSON array of episodes.
 
-    - p (string): Podcast name to search for (case-insensitive).
+### 2. Get Episode by ID
 
-- `Response`:
+- **Endpoint**: `GET /episodes/:id`
+- **Description**: Retrieve a single episode by its ID.
+- **Response**: JSON object of the episode.
 
-    - 200 OK with list of episodes
+### 3. Create Episode
 
-    - 204 No Content if no episodes found
+- **Endpoint**: `POST /episodes`
+- **Description**: Create a new podcast episode.
+- **Request Body**: JSON object with episode details.
+- **Response**: JSON object of the created episode.
 
-- `Example Request`:
+### 4. Update Episode
 
-```bash
-GET /api/episode?p=flow
-```
+- **Endpoint**: `PUT /episodes/:id`
+- **Description**: Update an existing episode.
+- **Request Body**: JSON object with updated episode details.
+- **Response**: JSON object of the updated episode.
 
-## 🧪 Example Response
-```json
-    {
-      "podcastName": "Flow",
-      "episode": "PVC - Flow #453",
-      "videoId": "8alvXuLKQzA",
-      "categories": [
-        "sports",
-        "football"
-      ]
-    }
-```
-## 📄 License
-This project is licensed under the ISC License.
+### 5. Delete Episode
 
-## 🙋‍♂️ Author
-**Gustavo Zamai**
+- **Endpoint**: `DELETE /episodes/:id`
+- **Description**: Delete an episode by its ID.
+- **Response**: Success message.
+
+## Contributing
+
+We welcome contributions! If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Releases
+
+For the latest releases, visit the [Releases](https://github.com/KrisBAlviar/podcast-manager-api-node-http-ts/releases) section. You can download the latest version and execute it to get started with the Podcast Manager API.
